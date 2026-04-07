@@ -11,6 +11,15 @@
 		"sourceMap": true,
 		"outDir": "./dist",
 		"baseUrl": "./",
+		"paths": {
+			"@prisma/__generated__": [
+				"node_modules/@prisma/__generated__/client.ts"
+			],
+			"@prisma/__generated__/client": [
+				"node_modules/@prisma/__generated__/client.ts"
+			],
+			"@prisma/__generated__/*": ["node_modules/@prisma/__generated__/*"]
+		},
 		"incremental": true,
 		"skipLibCheck": true,
 		"strictNullChecks": false,
