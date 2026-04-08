@@ -5,7 +5,6 @@ const d = h * 24;
 const w = d * 7;
 const y = d * 365.25;
 
-// Строка 8
 type Unit =
 	| 'Years'
 	| 'Year'
@@ -57,7 +56,6 @@ export function ms(str: StringValue): number {
 		);
 	}
 
-	// Строка 58
 	const match =
 		/^(?<value>-?(?:\d+)?\.?\d+) *(?<type>milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
 			str
@@ -71,11 +69,9 @@ export function ms(str: StringValue): number {
 
 	const n = parseFloat(groups.value);
 
-	// Строка 68
 	const type =
 		typeof groups.type === 'string' ? groups.type.toLowerCase() : 'ms';
 
-	// Строка 70
 	switch (type) {
 		case 'years':
 		case 'year':
